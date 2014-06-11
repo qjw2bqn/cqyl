@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CDKCYOAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="CDKCYOAModelStoreContainer">
+          <EntitySet Name="User" EntityType="CDKCYOAModel.Store.User" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="UserPwd" Type="nvarchar" MaxLength="255" />
+          <Property Name="UserRole" Type="int" />
+          <Property Name="UserStatus" Type="int" />
+          <Property Name="UserUsbhd" Type="nvarchar" MaxLength="64" />
+          <Property Name="UserIsUsbKey" Type="nvarchar" MaxLength="2" />
+          <Property Name="UserSpdeCode" Type="nvarchar" MaxLength="6" />
+          <Property Name="UserCreateTime" Type="date" />
+          <Property Name="StaffName" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="StaffSex" Type="int" />
+          <Property Name="StaffDuty" Type="varchar" MaxLength="50" />
+          <Property Name="StaffIndentyCardID" Type="varchar" MaxLength="50" />
+          <Property Name="StaffWorkTime" Type="date" />
+          <Property Name="StaffBirthDay" Type="date" />
+          <Property Name="StaffAge" Type="int" />
+          <Property Name="StaffEducation" Type="varchar" MaxLength="50" />
+          <Property Name="StaffNation" Type="varchar" MaxLength="50" />
+          <Property Name="StaffPoliticalStatus" Type="varchar" MaxLength="50" />
+          <Property Name="StaffTitle" Type="varchar" MaxLength="50" />
+          <Property Name="StaffQualify" Type="varchar" MaxLength="50" />
+          <Property Name="StaffHighestEducation" Type="varchar" MaxLength="50" />
+          <Property Name="StaffGraduate" Type="varchar" MaxLength="50" />
+          <Property Name="StaffProfession" Type="varchar" MaxLength="50" />
+          <Property Name="StaffGraducationTime" Type="date" />
+          <Property Name="StaffNativePlace" Type="varchar" MaxLength="50" />
+          <Property Name="StaffPageSize" Type="int" />
+          <Property Name="StaffIds" Type="nvarchar(max)" />
+          <Property Name="StaffSocialInsuranceNO" Type="varchar" MaxLength="50" />
+          <Property Name="StaffAccumFundNO" Type="varchar" MaxLength="50" />
+          <Property Name="StaffFileNO" Type="varchar" MaxLength="50" />
+          <Property Name="StaffDepartmentID" Type="int" />
+          <Property Name="StaffDepartmentName" Type="varchar" MaxLength="50" />
+          <Property Name="StaffDegree" Type="varchar" MaxLength="50" />
+          <Property Name="StaffComment" Type="text" />
+          <Property Name="StaffPositionID" Type="int" />
+          <Property Name="StaffPositionName" Type="varchar" MaxLength="50" />
+          <Property Name="StaffStatus" Type="int" />
+          <Property Name="StaffBirthPlace" Type="varchar" MaxLength="50" />
+          <Property Name="StaffComeUnitTime" Type="date" />
+          <Property Name="StaffEmployStatus" Type="int" />
+          <Property Name="StaffMarryStatus" Type="int" />
+          <Property Name="StaffFileAddr" Type="varchar" MaxLength="50" />
+          <Property Name="StaffAddr" Type="varchar" MaxLength="50" />
+          <Property Name="StaffHouseholdAddr" Type="varchar" MaxLength="50" />
+          <Property Name="StaffPhone" Type="varchar" MaxLength="50" />
+          <Property Name="StaffHousePhone" Type="varchar" MaxLength="50" />
+          <Property Name="StaffEmail" Type="varchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CDKCYOAModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CDKCYOAEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="CDKCYOAModel.User" />
+        </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserPwd" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UserRole" />
+          <Property Type="Int32" Name="UserStatus" />
+          <Property Type="String" Name="UserUsbhd" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserIsUsbKey" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserSpdeCode" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="UserCreateTime" Precision="0" />
+          <Property Type="String" Name="StaffName" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="StaffSex" />
+          <Property Type="String" Name="StaffDuty" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffIndentyCardID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="StaffWorkTime" Precision="0" />
+          <Property Type="DateTime" Name="StaffBirthDay" Precision="0" />
+          <Property Type="Int32" Name="StaffAge" />
+          <Property Type="String" Name="StaffEducation" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffNation" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffPoliticalStatus" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffTitle" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffQualify" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffHighestEducation" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffGraduate" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffProfession" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="StaffGraducationTime" Precision="0" />
+          <Property Type="String" Name="StaffNativePlace" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="StaffPageSize" />
+          <Property Type="String" Name="StaffIds" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StaffSocialInsuranceNO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffAccumFundNO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffFileNO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="StaffDepartmentID" />
+          <Property Type="String" Name="StaffDepartmentName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffDegree" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffComment" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="StaffPositionID" />
+          <Property Type="String" Name="StaffPositionName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="StaffStatus" />
+          <Property Type="String" Name="StaffBirthPlace" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="StaffComeUnitTime" Precision="0" />
+          <Property Type="Int32" Name="StaffEmployStatus" />
+          <Property Type="Int32" Name="StaffMarryStatus" />
+          <Property Type="String" Name="StaffFileAddr" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffAddr" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffHouseholdAddr" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffPhone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffHousePhone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StaffEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CDKCYOAModelStoreContainer" CdmEntityContainer="CDKCYOAEntities">
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="CDKCYOAModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="StaffEmail" ColumnName="StaffEmail" />
+                <ScalarProperty Name="StaffHousePhone" ColumnName="StaffHousePhone" />
+                <ScalarProperty Name="StaffPhone" ColumnName="StaffPhone" />
+                <ScalarProperty Name="StaffHouseholdAddr" ColumnName="StaffHouseholdAddr" />
+                <ScalarProperty Name="StaffAddr" ColumnName="StaffAddr" />
+                <ScalarProperty Name="StaffFileAddr" ColumnName="StaffFileAddr" />
+                <ScalarProperty Name="StaffMarryStatus" ColumnName="StaffMarryStatus" />
+                <ScalarProperty Name="StaffEmployStatus" ColumnName="StaffEmployStatus" />
+                <ScalarProperty Name="StaffComeUnitTime" ColumnName="StaffComeUnitTime" />
+                <ScalarProperty Name="StaffBirthPlace" ColumnName="StaffBirthPlace" />
+                <ScalarProperty Name="StaffStatus" ColumnName="StaffStatus" />
+                <ScalarProperty Name="StaffPositionName" ColumnName="StaffPositionName" />
+                <ScalarProperty Name="StaffPositionID" ColumnName="StaffPositionID" />
+                <ScalarProperty Name="StaffComment" ColumnName="StaffComment" />
+                <ScalarProperty Name="StaffDegree" ColumnName="StaffDegree" />
+                <ScalarProperty Name="StaffDepartmentName" ColumnName="StaffDepartmentName" />
+                <ScalarProperty Name="StaffDepartmentID" ColumnName="StaffDepartmentID" />
+                <ScalarProperty Name="StaffFileNO" ColumnName="StaffFileNO" />
+                <ScalarProperty Name="StaffAccumFundNO" ColumnName="StaffAccumFundNO" />
+                <ScalarProperty Name="StaffSocialInsuranceNO" ColumnName="StaffSocialInsuranceNO" />
+                <ScalarProperty Name="StaffIds" ColumnName="StaffIds" />
+                <ScalarProperty Name="StaffPageSize" ColumnName="StaffPageSize" />
+                <ScalarProperty Name="StaffNativePlace" ColumnName="StaffNativePlace" />
+                <ScalarProperty Name="StaffGraducationTime" ColumnName="StaffGraducationTime" />
+                <ScalarProperty Name="StaffProfession" ColumnName="StaffProfession" />
+                <ScalarProperty Name="StaffGraduate" ColumnName="StaffGraduate" />
+                <ScalarProperty Name="StaffHighestEducation" ColumnName="StaffHighestEducation" />
+                <ScalarProperty Name="StaffQualify" ColumnName="StaffQualify" />
+                <ScalarProperty Name="StaffTitle" ColumnName="StaffTitle" />
+                <ScalarProperty Name="StaffPoliticalStatus" ColumnName="StaffPoliticalStatus" />
+                <ScalarProperty Name="StaffNation" ColumnName="StaffNation" />
+                <ScalarProperty Name="StaffEducation" ColumnName="StaffEducation" />
+                <ScalarProperty Name="StaffAge" ColumnName="StaffAge" />
+                <ScalarProperty Name="StaffBirthDay" ColumnName="StaffBirthDay" />
+                <ScalarProperty Name="StaffWorkTime" ColumnName="StaffWorkTime" />
+                <ScalarProperty Name="StaffIndentyCardID" ColumnName="StaffIndentyCardID" />
+                <ScalarProperty Name="StaffDuty" ColumnName="StaffDuty" />
+                <ScalarProperty Name="StaffSex" ColumnName="StaffSex" />
+                <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+                <ScalarProperty Name="UserCreateTime" ColumnName="UserCreateTime" />
+                <ScalarProperty Name="UserSpdeCode" ColumnName="UserSpdeCode" />
+                <ScalarProperty Name="UserIsUsbKey" ColumnName="UserIsUsbKey" />
+                <ScalarProperty Name="UserUsbhd" ColumnName="UserUsbhd" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+                <ScalarProperty Name="UserPwd" ColumnName="UserPwd" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

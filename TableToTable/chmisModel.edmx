@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="chmisdbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="chmisdbModelStoreContainer">
+          <EntitySet Name="department" EntityType="chmisdbModel.Store.department" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="userinfo" EntityType="chmisdbModel.Store.userinfo" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="de_code" />
+          </Key>
+          <Property Name="de_code" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="de_name" Type="nvarchar" MaxLength="32" />
+          <Property Name="de_updepart" Type="nvarchar" MaxLength="6" />
+          <Property Name="de_function" Type="nvarchar" MaxLength="255" />
+          <Property Name="de_registertime" Type="datetime" />
+          <Property Name="de_principal" Type="nvarchar" MaxLength="255" />
+          <Property Name="de_remarks" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="userinfo">
+          <Key>
+            <PropertyRef Name="us_user" />
+          </Key>
+          <Property Name="us_user" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="us_password" Type="nvarchar" MaxLength="255" />
+          <Property Name="us_usbkeyhd" Type="nvarchar" MaxLength="64" />
+          <Property Name="us_isusbkey" Type="nvarchar" MaxLength="2" />
+          <Property Name="us_name" Type="nvarchar" MaxLength="32" />
+          <Property Name="de_code" Type="nvarchar" MaxLength="6" />
+          <Property Name="us_spdecode" Type="nvarchar" MaxLength="6" />
+          <Property Name="ro_code" Type="nvarchar" MaxLength="4" />
+          <Property Name="us_sex" Type="nvarchar" MaxLength="2" />
+          <Property Name="us_birthday" Type="nvarchar" MaxLength="32" />
+          <Property Name="po_code" Type="nvarchar" MaxLength="4" />
+          <Property Name="us_email" Type="nvarchar" MaxLength="255" />
+          <Property Name="us_phone" Type="nvarchar" MaxLength="16" />
+          <Property Name="us_mobile" Type="nvarchar" MaxLength="16" />
+          <Property Name="us_state" Type="nvarchar" MaxLength="8" />
+          <Property Name="us_createtime" Type="nvarchar" MaxLength="32" />
+          <Property Name="us_nationality" Type="nvarchar" MaxLength="32" />
+          <Property Name="us_nativeplace" Type="nvarchar" MaxLength="255" />
+          <Property Name="us_homeplace" Type="nvarchar" MaxLength="255" />
+          <Property Name="us_publicist" Type="nvarchar" MaxLength="32" />
+          <Property Name="us_marriage" Type="nvarchar" MaxLength="2" />
+          <Property Name="us_lastlydegree" Type="nvarchar" MaxLength="32" />
+          <Property Name="us_graduateschool" Type="nvarchar" MaxLength="255" />
+          <Property Name="us_graduatetime" Type="nvarchar" MaxLength="32" />
+          <Property Name="us_comeunittime" Type="nvarchar" MaxLength="32" />
+          <Property Name="us_retainingmode" Type="nvarchar" MaxLength="32" />
+          <Property Name="us_archives" Type="nvarchar" MaxLength="255" />
+          <Property Name="us_census" Type="nvarchar" MaxLength="255" />
+          <Property Name="us_identity" Type="nvarchar" MaxLength="255" />
+          <Property Name="us_speciality" Type="nvarchar" MaxLength="255" />
+          <Property Name="us_competence" Type="nvarchar" MaxLength="255" />
+          <Property Name="us_homeaddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="us_pagesize" Type="int" />
+          <Property Name="no_ids" Type="nvarchar(max)" />
+          <Property Name="us_remarks" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="chmisdbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="chmisdbEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="departments" EntityType="chmisdbModel.department" />
+          <EntitySet Name="userinfoes" EntityType="chmisdbModel.userinfo" />
+        </EntityContainer>
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="de_code" />
+          </Key>
+          <Property Name="de_code" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="de_name" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="de_updepart" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="de_function" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="de_registertime" Type="DateTime" Precision="3" />
+          <Property Name="de_principal" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="de_remarks" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="userinfo">
+          <Key>
+            <PropertyRef Name="us_user" />
+          </Key>
+          <Property Name="us_user" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="us_password" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="us_usbkeyhd" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="us_isusbkey" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="us_name" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="de_code" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="us_spdecode" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="ro_code" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+          <Property Name="us_sex" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="us_birthday" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="po_code" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+          <Property Name="us_email" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="us_phone" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="us_mobile" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="us_state" Type="String" MaxLength="8" Unicode="true" FixedLength="false" />
+          <Property Name="us_createtime" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="us_nationality" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="us_nativeplace" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="us_homeplace" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="us_publicist" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="us_marriage" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="us_lastlydegree" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="us_graduateschool" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="us_graduatetime" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="us_comeunittime" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="us_retainingmode" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="us_archives" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="us_census" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="us_identity" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="us_speciality" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="us_competence" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="us_homeaddress" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="us_pagesize" Type="Int32" />
+          <Property Name="no_ids" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="us_remarks" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="chmisdbModelStoreContainer" CdmEntityContainer="chmisdbEntities">
+          <EntitySetMapping Name="departments">
+            <EntityTypeMapping TypeName="chmisdbModel.department">
+              <MappingFragment StoreEntitySet="department">
+                <ScalarProperty Name="de_code" ColumnName="de_code" />
+                <ScalarProperty Name="de_name" ColumnName="de_name" />
+                <ScalarProperty Name="de_updepart" ColumnName="de_updepart" />
+                <ScalarProperty Name="de_function" ColumnName="de_function" />
+                <ScalarProperty Name="de_registertime" ColumnName="de_registertime" />
+                <ScalarProperty Name="de_principal" ColumnName="de_principal" />
+                <ScalarProperty Name="de_remarks" ColumnName="de_remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="userinfoes">
+            <EntityTypeMapping TypeName="chmisdbModel.userinfo">
+              <MappingFragment StoreEntitySet="userinfo">
+                <ScalarProperty Name="us_user" ColumnName="us_user" />
+                <ScalarProperty Name="us_password" ColumnName="us_password" />
+                <ScalarProperty Name="us_usbkeyhd" ColumnName="us_usbkeyhd" />
+                <ScalarProperty Name="us_isusbkey" ColumnName="us_isusbkey" />
+                <ScalarProperty Name="us_name" ColumnName="us_name" />
+                <ScalarProperty Name="de_code" ColumnName="de_code" />
+                <ScalarProperty Name="us_spdecode" ColumnName="us_spdecode" />
+                <ScalarProperty Name="ro_code" ColumnName="ro_code" />
+                <ScalarProperty Name="us_sex" ColumnName="us_sex" />
+                <ScalarProperty Name="us_birthday" ColumnName="us_birthday" />
+                <ScalarProperty Name="po_code" ColumnName="po_code" />
+                <ScalarProperty Name="us_email" ColumnName="us_email" />
+                <ScalarProperty Name="us_phone" ColumnName="us_phone" />
+                <ScalarProperty Name="us_mobile" ColumnName="us_mobile" />
+                <ScalarProperty Name="us_state" ColumnName="us_state" />
+                <ScalarProperty Name="us_createtime" ColumnName="us_createtime" />
+                <ScalarProperty Name="us_nationality" ColumnName="us_nationality" />
+                <ScalarProperty Name="us_nativeplace" ColumnName="us_nativeplace" />
+                <ScalarProperty Name="us_homeplace" ColumnName="us_homeplace" />
+                <ScalarProperty Name="us_publicist" ColumnName="us_publicist" />
+                <ScalarProperty Name="us_marriage" ColumnName="us_marriage" />
+                <ScalarProperty Name="us_lastlydegree" ColumnName="us_lastlydegree" />
+                <ScalarProperty Name="us_graduateschool" ColumnName="us_graduateschool" />
+                <ScalarProperty Name="us_graduatetime" ColumnName="us_graduatetime" />
+                <ScalarProperty Name="us_comeunittime" ColumnName="us_comeunittime" />
+                <ScalarProperty Name="us_retainingmode" ColumnName="us_retainingmode" />
+                <ScalarProperty Name="us_archives" ColumnName="us_archives" />
+                <ScalarProperty Name="us_census" ColumnName="us_census" />
+                <ScalarProperty Name="us_identity" ColumnName="us_identity" />
+                <ScalarProperty Name="us_speciality" ColumnName="us_speciality" />
+                <ScalarProperty Name="us_competence" ColumnName="us_competence" />
+                <ScalarProperty Name="us_homeaddress" ColumnName="us_homeaddress" />
+                <ScalarProperty Name="us_pagesize" ColumnName="us_pagesize" />
+                <ScalarProperty Name="no_ids" ColumnName="no_ids" />
+                <ScalarProperty Name="us_remarks" ColumnName="us_remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
